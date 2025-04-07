@@ -1,0 +1,24 @@
+@import "tailwindcss"; 
+
+:root {
+  --foreground: #171717;
+  --font-sans: var(--font-plus-jakarta-sans);
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif); /* Using the new font */
+  
+  /* Background Gradient */
+  background: linear-gradient(to right, #ff7763, #505dff); /* bg-gradient-to-r from-[#ff7763] to-[#505dff] */
+}
